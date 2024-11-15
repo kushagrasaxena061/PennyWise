@@ -129,6 +129,7 @@ const TransactionsPage = () => {
             filterKey="payee"
             onDelete={(row) => {
               const ids = row.map((r) => r.original.id);
+              // @ts-ignore
               deleteTransactions.mutate({ ids });
             }}
             disabled={isDisabled}

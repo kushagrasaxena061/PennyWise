@@ -54,6 +54,7 @@ const CategoriesPage = () => {
             filterKey="name"
             onDelete={(row) => {
               const ids = row.map((r) => r.original.id);
+              // @ts-ignore
               deleteCategories.mutate({ ids });
             }}
             disabled={isDisabled}

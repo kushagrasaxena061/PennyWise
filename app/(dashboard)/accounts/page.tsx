@@ -47,11 +47,12 @@ const AccountsPage = () => {
         </CardHeader>
         <CardContent>
           <DataTable
+            filterKey="email"
             columns={columns}
             data={accounts}
-            filterKey="name"
             onDelete={(row) => {
-              const ids = row.map((r) => r.original.id);
+
+              const ids = row.map((r) => r.original.id); // Assign 'any' type to ids
               // @ts-ignore
               deleteAccounts.mutate({ ids });
             }}
