@@ -52,6 +52,7 @@ const AccountsPage = () => {
             filterKey="name"
             onDelete={(row) => {
               const ids = row.map((r) => r.original.id);
+              // @ts-ignore
               deleteAccounts.mutate({ ids });
             }}
             disabled={isDisabled}
@@ -62,3 +63,5 @@ const AccountsPage = () => {
 };
 
 export default AccountsPage;
+
+
