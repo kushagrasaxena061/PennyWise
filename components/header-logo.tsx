@@ -6,7 +6,7 @@ export const HeaderLogo = () => {
   return (
     <Link href="/">
       <div className=" items-center hidden lg:flex">
-        <Image src="/logo.svg" alt="Logo" height={64} width={64} />
+        <Image src="/logo.jpeg" alt="Logo" height={64} width={64} />
       </div>
     </Link>
   );
